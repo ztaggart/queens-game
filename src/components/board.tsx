@@ -170,18 +170,6 @@ const Board = () => {
         setHasWon(true);
       }
 
-      // setGameBoard([
-      //   ...gameBoard.slice(0, rowIndex),
-      //   [
-      //     ...gameBoard[rowIndex].slice(0, colIndex),
-      //     {
-      //       ...existingSquare,
-      //       mark,
-      //     },
-      //     ...gameBoard[rowIndex].slice(colIndex + 1),
-      //   ],
-      //   ...gameBoard.slice(rowIndex + 1),
-      // ]);
       setGameBoard(modifiedBoard);
     }
   }
