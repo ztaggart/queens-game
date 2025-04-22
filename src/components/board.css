@@ -1,0 +1,11 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30%;
+  width: 70%;
+  position: relative;
+}
+
+.row {
+  display: flex;
+}

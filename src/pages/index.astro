@@ -1,11 +1,70 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Board from "../components/board.tsx";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Queens</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      .page {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        font-size: 2em;
+        text-align: center;
+      }
+
+      .board-container {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">Queens</div>
+      <div class="board-container">
+        <Board client:load />
+      </div>
+      <div class="footer">
+        Credits:
+        <div>
+          This is a clone of by LinkedIn's <a
+            href="https://www.linkedin.com/games/queens/"
+            title="queens">Queens Game</a
+          > I created for fun
+        </div>
+        <div>
+          <a
+            href="https://www.flaticon.com/free-icons/crown"
+            title="crown icons">Crown icons created by Freepik - Flaticon</a
+          >
+        </div>
+        <div>
+          <a
+            href="https://www.flaticon.com/free-icons/wrong"
+            title="wrong icons">Cross icons created by AdhieM - Flaticon</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
