@@ -1,0 +1,28 @@
+.square {
+  position: relative;
+  color: black;
+  text-shadow: white 0px 0px 10px;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid black;
+  flex: 1 1 0;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.square .icon {
+  max-width: 80%;
+}
+
+.square .icon.cross {
+  max-width: 60%;
+}
+
+.square .incorrect {
+  position: absolute;
+  max-width: 100%;
+}
